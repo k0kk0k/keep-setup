@@ -18,7 +18,7 @@ async function main() {
 
 		const keepBondingContract = new ethers.Contract(KeepBonding.networks["3"].address, KeepBonding.abi, wallet);
 
-		const deposit = await keepBondingContract.withdraw(ethers.utils.parseEther('20.0'), w.address)
+		const withdraw = await keepBondingContract.withdraw(ethers.utils.parseEther('20.0'), w.address)
 		console.log(`withdrawing eth`)
 		await withdraw.wait()
 
